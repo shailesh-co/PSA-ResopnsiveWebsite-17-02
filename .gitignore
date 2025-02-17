@@ -1,0 +1,24 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker-related files
+docker-compose.override.yml
+Dockerfile
+.dockerignore
+
+# Editor/OS specific files
+.DS_Store
+Thumbs.db
+.vscode/
+.ide
