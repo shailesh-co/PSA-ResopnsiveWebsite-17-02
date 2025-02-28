@@ -1,0 +1,122 @@
+body {
+    padding-top: 60px;
+    /* Adjust based on navbar height */
+  }
+
+  .navbar-nav {
+    color: red !important;
+  }
+
+  hr.divider {
+    height: 0.2rem;
+    max-width: 3.25rem;
+    margin: 1.5rem auto;
+    background-color: #f4623a;
+    opacity: 1;
+  }
+
+  hr.divider-light {
+    background-color: #fff;
+  }
+
+  .text-primary {
+    color: #ff6600 !important;
+  }
+
+  .hidden {
+    display: none;
+}
+
+.background-container {
+  background: url('/PSA-ResopnsiveWebsite-17-02/images/banner2.png') center center/cover !important;
+  min-height: 400px;
+  width: 100%;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* Scrollable Container */
+.scrollable-row {
+  display: flex;
+  overflow: hidden; /* Hide overflowing content */
+  width: 100%; /* Full width */
+  white-space: nowrap; /* Prevent content wrap */
+}
+
+.scrollable-content {
+  display: flex;
+  gap: 20px; /* Space between cards */
+  animation: scroll-left 20s linear infinite; /* Auto Scroll Animation */
+}
+
+.card-container {
+  flex: 0 0 auto; /* Prevent shrinking */
+  width: 320px; /* Fixed width for smooth effect */
+  border: 1px solid #ddd; /* Border for visual styling */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+  position: relative; /* Position relative to allow absolute child positioning */
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+}
+
+.card-image {
+  flex: 0 0 80px;
+  text-align: center;
+}
+
+.card-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.card-text {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Adjust the paragraph to take 300px width and wrap text */
+.card-paragraph {
+  width: 300px; /* Fixed width */
+  font-size: 14px;
+  color: #6c757d;
+  margin-top: 10px;
+  line-height: 1.6; /* Improve readability */
+  height: auto;
+  text-align: justify; /* Justify text for better appearance */
+}
+
+.card-btn {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Smooth infinite scrolling animation */
+@keyframes scroll-left {
+  0% {
+      transform: translateX(0%); /* Start from the right */
+  }
+  100% {
+      transform: translateX(-100%); /* End at the left */
+  }
+}
+
+/* Hover to Pause Animation */
+.scrollable-row:hover .scrollable-content {
+  animation-play-state: paused;
+}

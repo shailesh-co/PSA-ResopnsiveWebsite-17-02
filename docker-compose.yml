@@ -1,17 +1,25 @@
 version: '3.8'
 
 services:
+  frontend:
+    build: ./frontend
+    container_name: frontend_container
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
   backend:
     build: ./backend
+    container_name: backend_container
     ports:
       - "5000:5000"
     depends_on:
       - mongodb
     environment:
-      MONGO_URI: mongodb://mongodb:27017/userdata
+      - MONGO_URI=mongodb://mongodb:27017/userdata
     volumes:
       - ./backend:/app
-      - ./frontend:/app/frontend
       - /app/node_modules
 
   mongodb:

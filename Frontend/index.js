@@ -133,3 +133,9 @@ const nameInput = document.getElementById('name');
             }
         });
 
+        window.onload = function () {
+            const content = document.querySelector('.scrollable-content');
+            const clone = content.cloneNode(true);
+            content.parentElement.appendChild(clone);
+        };
+

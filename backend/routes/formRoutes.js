@@ -2,10 +2,14 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 
-// POST API to Submit Form Data
+// ✅ Correct POST API Route
 router.post('/submit-form', async (req, res) => {
     try {
         const { name, email, contact, country, state } = req.body;
+
+        if (!name || !email || !contact || !country) {
+            return res.status(400).json({ error: "Missing required fields" });
+        }
 
         // Save User Data in MongoDB
         const newUser = new User({
