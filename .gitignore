@@ -14,7 +14,6 @@ yarn-error.log*
 
 # Docker-related files
 docker-compose.override.yml
-Dockerfile
 .dockerignore
 
 # Editor/OS specific files
