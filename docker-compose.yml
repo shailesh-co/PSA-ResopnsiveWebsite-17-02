@@ -20,3 +20,14 @@ services:
     environment:
       - EMAIL_USER=services.psatech@gmail.com
       - EMAIL_PASS=lzis bjha poip rzzs
+
+  mongo:
+    image: mongo:5.0
+    container_name: mongo_container
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
